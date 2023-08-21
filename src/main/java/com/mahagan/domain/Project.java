@@ -1,58 +1,53 @@
 package com.mahagan.domain;
 
-public class Project {
-    private int projectNo;
-    private  String title;
-    private String description;
-    private  int duration;
-    private String status;
+import com.mahagan.dao.ProjectDao;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-    public int getProjectNo() {
-        return projectNo;
+public class Project
+{
+    private int id;
+    private String email;
+    private String username;
+    private String password;
+
+    public int getId() {
+        return id;
     }
 
-    public void setProjectNo(int projectNo) {
-        this.projectNo = projectNo;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getEmail() {
+        return email;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getDescription() {
-        return description;
+    public String getUsername() {
+        return username;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public int getDuration() {
-        return duration;
+    public String getPassword() {
+        return password;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Project(int projectNo, String title, String description, int duration, String status) {
-        this.projectNo = projectNo;
-        this.title = title;
-        this.description = description;
-        this.duration = duration;
-        this.status = status;
+    public Project(int id, String email, String username, String password) {
+        this.id = id;
+        this.email = email;
+        this.username = username;
+        this.password = password;
     }
 
     public Project() {
@@ -61,11 +56,10 @@ public class Project {
     @Override
     public String toString() {
         return "Project{" +
-                "projectNo=" + projectNo +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", duration=" + duration +
-                ", status='" + status + '\'' +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
