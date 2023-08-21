@@ -9,5 +9,8 @@
         <module name="JDBCUpdateRecordInMYSQLWorkBenchSecond" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringJDBCWithUpadateFromDB" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
